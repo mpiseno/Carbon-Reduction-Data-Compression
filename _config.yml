@@ -1,1 +1,7 @@
 theme: jekyll-theme-cayman
+
+title: "Reducing Carbon Emissions at Dropbox: HackWeek 2020"
+# description: "This website is to showcase the work I did at Dropbox during HackWeek to reduce carbon emissions by compressing data in a smarter way"
+
+baseurl: "/Carbon-Reduction-Data-Compression" # the subpath of your site, e.g. /blog
+url: "http://www.michaelpiseno.com" # the base hostname & protocol for your site, e.g. http://example.com
