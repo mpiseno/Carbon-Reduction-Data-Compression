@@ -4,7 +4,56 @@
 @import "{{ site.theme }}";
 
 .page-header {
-    background: #1221DF;
+    background-color: white;
+    background-repeat:no-repeat;
+    background-position: center center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+
+    background-image: url("{{ site.baseurl }}/assets/img/header-background.png");
+    background-repeat:no-repeat;
+    background-position: center center;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.header-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70%;
+    width: 80%;
+
+    background-color: white;
+
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.header-text {
+    font-size: 2.25rem;
+    font-weight: 600;
+
+    color: #1d57e3ff;
+}
+
+.header-btn {
+    background-color: #FFAFA2;
+
+    color: #0D2F81;
+
+    font-size: 1.0rem;
+    padding: 8px 25px;
+    border-radius: 4px;
+    box-shadow: 1px 2px;
 }
 
 header img {

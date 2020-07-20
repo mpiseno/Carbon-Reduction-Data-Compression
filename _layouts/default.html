@@ -11,6 +11,12 @@
         gtag('config', '{{ site.google_analytics }}');
       </script>
     {% endif %}
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
     <meta charset="UTF-8">
 
 {% seo %}
@@ -19,22 +25,36 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon.png"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
   <body>
-    <header class="page-header" role="banner">
-      <div class="header-container">
-        <img src="{{ site.baseurl }}/assets/img/planetdbx.png">
-        <h1 class="project-name">Reducing Carbon Emissions at Dropbox</h1>
-        <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+    <!-- <header role="banner">
+      
+    </header> -->
+    <div class="header-container">
+      <div class="header-content">
+        <img src="{{ site.baseurl }}/assets/img/dbx.png" style="max-width: 10%">
+        <img src="{{ site.baseurl }}/assets/img/planetdbx.png" style="max-width: 50%">
+        <div class="header-text">
+          Reducing Carbon Emissions at Dropbox
+        </div>
         {% if site.github.is_project_page %}
-          <a href="http://www.michaelpiseno.com/" target="_blank" class="btn">Michael Piseno</a>
+        <div class="header-btn" onclick="window.open('http://www.michaelpiseno.com/','mywindow');" style="cursor: pointer;">
+          <a href="http://www.michaelpiseno.com/" target="_blank" style="color: #0D2F81">Michael Piseno</a>
+        </div>
+        {% endif %}
+      </div>
+        <!-- <img src="{{ site.baseurl }}/assets/img/planetdbx.png"> -->
+        <!-- <h1 class="project-name">Reducing Carbon Emissions at Dropbox</h1> -->
+        <!-- <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2> -->
+        <!-- {% if site.github.is_project_page %}
+          <a href="http://www.michaelpiseno.com/" target="_blank" class="btn" style="color:white">Michael Piseno</a>
         {% endif %}
         {% if site.show_downloads %}
           <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
           <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
-        {% endif %}
-      </div>
-    </header>
+        {% endif %} -->
+    </div>
 
     <main id="content" class="main-content" role="main">
       {{ content }}
