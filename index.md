@@ -5,7 +5,7 @@ layout: default
 # Dropbox Internship and Hack Week
 
 <p align="justify">
-This summer I had the humbling opportunity to intern at Dropbox as a software engineer intern. I worked on <a href="https://www.blinkapp.io/" target="_blank">Blink</a>, a chrome extension that helps users manage their workflow more efficiently, where I built the ML infrastructure from the ground up. Having worked at several tech companies in Silicon Valley, I can say that Dropbox has been one of the most rewarding experiences I have had, even as a remote internship due to the Covid-19 pandemic.
+This summer I had the humbling opportunity to intern at Dropbox as a software engineer intern. I worked on a chrome extension that helps users manage their workflow more efficiently, in which I built the ML infrastructure from the ground up. Having worked at several tech companies in Silicon Valley, I can say that Dropbox has been one of the most rewarding experiences I have had, even as a remote internship due to the Covid-19 pandemic.
 </p>
 
 <p align="justify">
@@ -43,7 +43,7 @@ where $s$ is the input string, $s_{i}$ is character $i$ of the string, and $p_{i
 <p align="justify">
 For example, given the string $s_{1}=$"Hiiii", the shannon entropy would be
 
-$$H(s_{1}) = -\frac{1}{5}\log_{2}(\frac{1}{5}) - 4 * \frac{4}{5}\log_{2}(\frac{1}{5}) = 1.49$$
+$$H(s_{1}) = -\frac{1}{5}\log_{2}(\frac{1}{5}) - 4 * \frac{4}{5}\log_{2}(\frac{4}{5}) = 1.49$$
 
 For $s_{2}=$"hello", the shannon entropy would be
 
@@ -77,7 +77,7 @@ When a user uploads data, we simply calculate $R$ on that data and use a larger 
 ## Carbon Reduction
 
 <p align="justify">
-So how does this translate into carbon reduction? Well we have to quantify how much electricity we are saving in terms of the amount of compute power we are saving, which will involve some assumptions. Based on reports, users upload approximated 500,000 GB of incompressible data each day. [1] estimates that each GB of data we compress and decompress takes 2000 J of energy. If we can find out the distribution of Dropbox users (per country) and the correspodning carbon emmisions per KwH of energy on average for each country, we can directly quantify the carbon reduction of not compressing incompressible data.
+So how does this translate into carbon reduction? Well we have to quantify how much electricity we are saving in terms of the amount of compute power we are saving, which will involve some assumptions. We can take the number of GB of incompressible data that users upload each day, which we call $N_{GB}$ and multply it by the energy used from compressing each GB. [1] estimates that each GB of data we compress and decompress takes 2000 J of energy. If we can find out the distribution of Dropbox users (per country) and the correspodning carbon emmisions per KwH of energy on average for each country, we can directly quantify the carbon reduction of not compressing incompressible data.
 </p>
 
 ## Results
